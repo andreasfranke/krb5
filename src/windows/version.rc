@@ -267,7 +267,7 @@ PRODUCTVERSION	K5_PRODUCT_VERSION
 FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
 FILEFLAGS	(VS_FF_DEBUG | VS_FF_PRIVATEBUILD | BETA_FLAG)
 FILEOS		Targ_OS
-FILETYPE        K5_FILETYPE
+FILETYPE        0x00000001L
 BEGIN
     BLOCK "VarFileInfo"
     BEGIN
@@ -297,16 +297,16 @@ BEGIN
             VALUE "Modified by Vendor",  VER_VENDOR
 #endif
             VALUE "CompanyName",        K5_COMPANY_NAME
-	    VALUE "FileDescription",	K5_DESCRIPTION
+	    VALUE "FileDescription", "MIT Kerberos Ticket Manager - " KRB5_PRODUCTNAME_STR "\0"
 	    VALUE "FileVersion",	K5_PRODUCT_VERSION_STRING
-	    VALUE "InternalName",	K5_INTERNAL_NAME
+	VALUE "InternalName", "K5_INTERNAL_NAME"
 #ifdef VER_LEGALTRADEMARK_STR
             VALUE VER_LEGALTRADEMARK_STR
 #else
 	    VALUE "LegalTrademarks",	"\0"
 #endif
-	    VALUE "OriginalFilename",	K5_ORIGINAL_NAME
-	    VALUE "ProductName",	K5_ORIGINAL_NAME
+	VALUE "OriginalFilename", "K5_ORIGINAL_NAME"
+	VALUE "ProductName", "K5_ORIGINAL_NAME"
 	    VALUE "ProductVersion",	K5_PRODUCT_VERSION_STRING
 
 	    VALUE "LegalCopyright",	K5_COPYRIGHT

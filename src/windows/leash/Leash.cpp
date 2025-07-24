@@ -582,6 +582,7 @@ FUNC_INFO profile_fi[] = {
     END_FUNC_INFO
 };
 
+#pragma warning(disable : 4996)
 // Tries to load the .DLL files.  If it works, we get some functions from them
 // and return a TRUE.  If it doesn't work, we return a FALSE.
 BOOL CLeashApp::InitDLLs()

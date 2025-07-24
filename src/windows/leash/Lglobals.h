@@ -24,6 +24,19 @@
 #include <loadfuncs-leash.h>
 #include <krb5.h>
 
+#pragma warning( push )
+#pragma warning( disable : 4100) //unreferenced parameters
+#pragma warning( disable : 4996) //security warnings, strcpy and such
+
+//silences warnings about "nonstandard" function
+#define strdup _strdup
+#define stricmp _stricmp
+#define strnicmp _strnicmp
+#define strlwr _strlwr
+#define strupr _strupr
+//#undef strdup
+#pragma warning( pop )
+
 // toolhelp functions
 TYPEDEF_FUNC(
     HANDLE,
